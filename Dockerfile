@@ -1,11 +1,8 @@
 FROM openjdk:8u102-jdk
 
-MAINTAINER Carlos Sanchez <carlos@apache.org>
+MAINTAINER Jesus Marin <jesus.c.marin.garcia@accenture.com>
 
-ENV JENKINS_SWARM_VERSION 3.12
 ENV HOME /home/jenkins-slave
-
-RUN curl -fsSL https://get.docker.com/ | sh
 
 # install netstat to allow connection health check with
 # netstat -tan | grep ESTABLISHED
