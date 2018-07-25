@@ -5,6 +5,8 @@ MAINTAINER Carlos Sanchez <carlos@apache.org>
 ENV JENKINS_SWARM_VERSION 3.12
 ENV HOME /home/jenkins-slave
 
+RUN curl -fsSL https://get.docker.com/ | sh
+
 # install netstat to allow connection health check with
 # netstat -tan | grep ESTABLISHED
 RUN apt-get update && apt-get install -y net-tools && rm -rf /var/lib/apt/lists/*
